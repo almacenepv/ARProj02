@@ -1,0 +1,105 @@
+Begin Object Class=/Script/Engine.Material Name="M_Poof"
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionClamp Name="MaterialExpressionClamp_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant Name="MaterialExpressionConstant_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionDynamicParameter Name="MaterialExpressionDynamicParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionParticleColor Name="MaterialExpressionParticleColor_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_0"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_0"
+      A=(Expression=MaterialExpressionTextureSample'"M_Poof:MaterialExpressionTextureSample_0"',OutputIndex=1,Mask=1,MaskR=1)
+      B=(Expression=MaterialExpressionTextureSample'"M_Poof:MaterialExpressionTextureSample_0"',OutputIndex=3,Mask=1,MaskB=1)
+      MaterialExpressionEditorX=-464
+      MaterialExpressionEditorY=448
+      MaterialExpressionGuid=355D6ED1446206749E10ED97B5D2AA4B
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="MaterialExpressionClamp_0"
+      Input=(Expression=MaterialExpressionAdd'"M_Poof:MaterialExpressionAdd_0"')
+      MaterialExpressionEditorX=-352
+      MaterialExpressionEditorY=448
+      MaterialExpressionGuid=FD254DF946505332ABC8B8BC8023C3DD
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="MaterialExpressionConstant_0"
+      MaterialExpressionEditorX=-320
+      MaterialExpressionEditorY=48
+      MaterialExpressionGuid=E4D3DD434292DD5BE162DD84FED9E11E
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="MaterialExpressionDynamicParameter_0"
+      ParamNames(0)="Emissive"
+      MaterialExpressionEditorX=-736
+      MaterialExpressionEditorY=224
+      MaterialExpressionGuid=F8D1286A40FE6F008A3F4CA813C576BB
+      Material=Material'"M_Poof"'
+      Outputs(0)=(OutputName="Emissive")
+      Outputs(1)=(OutputName="Param2")
+      Outputs(2)=(OutputName="Param3")
+      Outputs(3)=(OutputName="Param4")
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_0"
+      A=(Expression=MaterialExpressionParticleColor'"M_Poof:MaterialExpressionParticleColor_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      B=(Expression=MaterialExpressionMultiply'"M_Poof:MaterialExpressionMultiply_1"')
+      MaterialExpressionEditorX=-304
+      MaterialExpressionEditorY=128
+      MaterialExpressionGuid=528702A54EBD4AAA1547B698A6F3402B
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_1"
+      A=(Expression=MaterialExpressionDynamicParameter'"M_Poof:MaterialExpressionDynamicParameter_0"',Mask=1,MaskR=1)
+      B=(Expression=MaterialExpressionTextureSample'"M_Poof:MaterialExpressionTextureSample_0"',OutputIndex=3,Mask=1,MaskB=1)
+      MaterialExpressionEditorX=-480
+      MaterialExpressionEditorY=304
+      MaterialExpressionGuid=99DBFEAC4FAF73261065EB80305CC6D6
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="MaterialExpressionParticleColor_0"
+      MaterialExpressionEditorX=-560
+      MaterialExpressionEditorY=-16
+      MaterialExpressionGuid=B5D4E15248F0B23A55A22AAD249D1845
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_0"
+      Texture=Texture2D'"/Game/Muffled/Textures/T_Smoke.T_Smoke"'
+      MaterialExpressionEditorX=-736
+      MaterialExpressionEditorY=416
+      MaterialExpressionGuid=8FB6D6174C3B718F2AA8F29A3919FC9B
+      Material=Material'"M_Poof"'
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   BaseColor=(Expression=MaterialExpressionParticleColor'"MaterialExpressionParticleColor_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+   Specular=(Expression=MaterialExpressionConstant'"MaterialExpressionConstant_0"')
+   EmissiveColor=(Expression=MaterialExpressionMultiply'"MaterialExpressionMultiply_0"')
+   OpacityMask=(Expression=MaterialExpressionClamp'"MaterialExpressionClamp_0"')
+   BlendMode=BLEND_Masked
+   bUsedWithNiagaraSprites=True
+   bUsedWithNiagaraRibbons=True
+   Expressions(0)=MaterialExpressionConstant'"MaterialExpressionConstant_0"'
+   Expressions(1)=MaterialExpressionParticleColor'"MaterialExpressionParticleColor_0"'
+   Expressions(2)=MaterialExpressionMultiply'"MaterialExpressionMultiply_0"'
+   Expressions(3)=MaterialExpressionDynamicParameter'"MaterialExpressionDynamicParameter_0"'
+   Expressions(4)=MaterialExpressionMultiply'"MaterialExpressionMultiply_1"'
+   Expressions(5)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"'
+   Expressions(6)=MaterialExpressionAdd'"MaterialExpressionAdd_0"'
+   Expressions(7)=MaterialExpressionClamp'"MaterialExpressionClamp_0"'
+   StateId=CDA8ECDF44B0C5FE276961B856B23EC6
+   CachedExpressionData=(ReferencedTextures=(Texture2D'"/Game/Muffled/Textures/T_Smoke.T_Smoke"'),DynamicParameterNames=("Emissive","Param2","Param3","Param4"),QualityLevelsUsed=(False,False,False,False))
+   ReferencedTextureGuids(0)=F2FC2A7749E986A06F6597913262C8B6
+   TextureStreamingDataVersion=1
+   TextureStreamingData(0)=(SamplingScale=1.000000,UVChannelIndex=0,TextureName="T_Smoke",TextureReference=/Game/Muffled/Textures/T_Smoke.T_Smoke)
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   LightingGuid=6B58962A4C7DCFC27FF27F87DB9BE193
+End Object
